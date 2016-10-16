@@ -1,9 +1,12 @@
 <li>
     <div class="timeline-badge primary"><i class="fa fa-image"></i></div>
     <div class="timeline-panel wow animated fadeInUp">
-        <!-- <div class="timeline-heading">
-            <img class="img-responsive" src="img/img-6.jpg" alt=""/>
-        </div> -->
+
+        {% if include.image != nil %}
+        <div class="timeline-heading">
+            <img class="img-responsive" src="{{ include.image }}" alt=""/>
+        </div>
+        {% endif %}
 
         <div class="timeline-body">
             <h2>{{ include.title }}</h2>
