@@ -11,10 +11,36 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
+                {% if page.title == 'Home' %}
                 <li class="dropdown active "><a href="/" class="dropdown-toggle">Home</a></li>
+                {% else %}
+                <li class="dropdown"><a href="/" class="dropdown-toggle">Home</a></li>
+                {% endif %}
+
+                {% if page.title == 'Services' %}
+                <li class="dropdown active"><a href="/services" class="dropdown-toggle">Services</a></li>
+                {% else %}
                 <li class="dropdown"><a href="/services" class="dropdown-toggle">Services</a></li>
+                {% endif %}
+
+                {% if page.title == 'Gallery' %}
+                <li class="dropdown active"><a href="/gallery" class="dropdown-toggle">Gallery</a></li>
+                {% else %}
                 <li class="dropdown"><a href="/gallery" class="dropdown-toggle">Gallery</a></li>
-                <li class="dropdown"><a href="/news" class="dropdown-toggle">news</a></li>
+                {% endif %}
+
+                {% if page.title == 'Events' %}
+                <li class="dropdown active"><a href="/events" class="dropdown-toggle">Events</a></li>
+                {% else %}
+                <li class="dropdown"><a href="/events" class="dropdown-toggle">Events</a></li>
+                {% endif %}
+
+                {% if page.title == 'News' %}
+                <li class="dropdown active"><a href="/news" class="dropdown-toggle">News</a></li>
+                {% else %}
+                <li class="dropdown"><a href="/news" class="dropdown-toggle">News</a></li>
+                {% endif %}
+
             </ul>
         </div><!--/.nav-collapse -->
     </div><!--container-->
