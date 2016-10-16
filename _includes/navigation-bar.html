@@ -11,41 +11,33 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                {% if page.title == 'Home' %}
-                <li class="dropdown active "><a href="/" class="dropdown-toggle">Home</a></li>
-                {% else %}
-                <li class="dropdown"><a href="/" class="dropdown-toggle">Home</a></li>
-                {% endif %}
+                <li class="dropdown {% if page.title == 'Home' %} active {% endif %}">
+                  <a href="/" class="dropdown-toggle">Home</a>
+                </li>
 
-                {% if page.title == 'Services' %}
-                <li class="dropdown active"><a href="/services" class="dropdown-toggle">Services</a></li>
-                {% else %}
-                <li class="dropdown"><a href="/services" class="dropdown-toggle">Services</a></li>
-                {% endif %}
+                <li class="dropdown {% if page.title == 'Services' %} active {% endif %}">
+                  <a href="/services" class="dropdown-toggle">Services</a>
+                </li>
 
-                {% if page.title == 'Gallery' %}
-                <li class="dropdown active"><a href="/gallery" class="dropdown-toggle">Gallery</a></li>
-                {% else %}
-                <li class="dropdown"><a href="/gallery" class="dropdown-toggle">Gallery</a></li>
-                {% endif %}
+                <li class="dropdown {% if page.title == 'Gallery' %} active {% endif %}">
+                  <a href="/gallery" class="dropdown-toggle">Gallery</a>
+                </li>
 
-                {% if page.title == 'Events' %}
-                <li class="dropdown active"><a href="/events" class="dropdown-toggle">Events</a></li>
-                {% else %}
-                <li class="dropdown"><a href="/events" class="dropdown-toggle">Events</a></li>
-                {% endif %}
+                <li class="dropdown {% if page.title == 'Events' %} active {% endif %}">
+                  <a href="/events" class="dropdown-toggle">Events</a>
+                </li>
 
-                {% if page.title == 'News' %}
-                <li class="dropdown active"><a href="/news" class="dropdown-toggle">News</a></li>
-                {% else %}
-                <li class="dropdown"><a href="/news" class="dropdown-toggle">News</a></li>
-                {% endif %}
+                <li class="dropdown {% if page.title == 'News' %} active {% endif %}">
+                  <a href="/news" class="dropdown-toggle">News</a>
+                </li>
 
-                {% if page.title == 'ADK TV' %}
-                <li class="dropdown active"><a href="/adktv" class="dropdown-toggle">ADK TV</a></li>
-                {% else %}
-                <li class="dropdown"><a href="/adktv" class="dropdown-toggle">ADK TV</a></li>
-                {% endif %}
+                <li class="dropdown {% if page.title == 'ADK TV' %} active {% endif %}">
+                  <a href="/adktv" class="dropdown-toggle">ADK TV</a>
+                </li>
+
+                <li class="dropdown {% if page.title == 'ADK Resource' %} active {% endif %}">
+                  <a href="/resource" class="dropdown-toggle">ADK Resource</a>
+                </li>
 
             </ul>
         </div><!--/.nav-collapse -->

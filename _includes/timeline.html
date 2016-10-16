@@ -1,4 +1,4 @@
-<li>
+<li {% if include.position == 'right' %} class="timeline-inverted" {% endif %}>
     <div class="timeline-badge primary"><i class="fa fa-image"></i></div>
     <div class="timeline-panel wow animated fadeInUp">
 
@@ -10,11 +10,20 @@
 
         <div class="timeline-body">
             <h2>{{ include.title }}</h2>
+
+            {% if include.date != nil %}
             <ul class="list-inline post-detail">
                 <li><i class="fa fa-calendar"></i> {{ include.date }}</li>
             </ul>
+            {% endif %}
+
+            {% if include.content != nil %}
             <p>{{ include.content }}</p>
-            <!-- <a class="btn border-theme" href="#">Read More</a> -->
+            {% endif %}
+
+            {% if include.link != nil %}
+            <a class="btn border-theme" href="{{ include.link }}" target="_blank">Read More</a>
+            {% endif %}
         </div>
 
     </div>
