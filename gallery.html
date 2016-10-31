@@ -18,51 +18,42 @@ title: Gallery
             <div data-filter=".korean" class="cbp-filter-item">
                 Korean <div class="cbp-filter-counter"></div>
             </div>
+            <div data-filter=".indian" class="cbp-filter-item">
+                Indian <div class="cbp-filter-counter"></div>
+            </div>
+            <div data-filter=".thai" class="cbp-filter-item">
+                Thai <div class="cbp-filter-counter"></div>
+            </div>
+            <div data-filter=".turkish" class="cbp-filter-item">
+                Turkish <div class="cbp-filter-counter"></div>
+            </div>
         </div>
 
         <div id="masnory-container" class="cbp">
-          {% include photo-container.html category='korean' image='custom/gallery/1.png' %}
-          {% include photo-container.html category='korean' image='custom/gallery/2.png' %}
-          {% include photo-container.html category='korean' image='custom/gallery/3.png' %}
-          {% include photo-container.html category='korean' image='custom/gallery/4.png' %}
-          {% include photo-container.html category='korean' image='custom/gallery/5.png' %}
-          {% include photo-container.html category='korean' image='custom/gallery/6.png' %}
-          {% include photo-container.html category='korean' image='custom/gallery/7.png' %}
-          {% include photo-container.html category='korean' image='custom/gallery/8.png' %}
-          {% include photo-container.html category='korean' image='custom/gallery/9.png' %}
-          {% include photo-container.html category='korean' image='custom/gallery/10.png' %}
-          {% include photo-container.html category='korean' image='custom/gallery/11.png' %}
-          {% include photo-container.html category='korean' image='custom/gallery/12.png' %}
-          {% include photo-container.html category='korean' image='custom/gallery/13.png' %}
-          {% include photo-container.html category='korean' image='custom/gallery/14.png' %}
-          {% include photo-container.html category='korean' image='custom/gallery/15.png' %}
-          {% include photo-container.html category='korean' image='custom/gallery/16.png' %}
-          {% include photo-container.html category='korean' image='custom/gallery/17.png' %}
-          {% include photo-container.html category='korean' image='custom/gallery/18.png' %}
-          {% include photo-container.html category='korean' image='custom/gallery/19.png' %}
-          {% include photo-container.html category='korean' image='custom/gallery/20.png' %}
+          {% for i in (1..33) %}
+            {% capture image %}custom/gallery/korean/{{i}}.jpg{% endcapture %}
+            {% include photo-container.html category='korean' image=image %}
+          {% endfor %}
 
-          {% include photo-container.html category='korean' image='custom/gallery/korean/1.jpg' %}
-          {% include photo-container.html category='korean' image='custom/gallery/korean/2.jpg' %}
-          {% include photo-container.html category='korean' image='custom/gallery/korean/3.jpg' %}
-          {% include photo-container.html category='korean' image='custom/gallery/korean/4.jpg' %}
-          {% include photo-container.html category='korean' image='custom/gallery/korean/5.jpg' %}
-          {% include photo-container.html category='korean' image='custom/gallery/korean/6.jpg' %}
-          {% include photo-container.html category='korean' image='custom/gallery/korean/7.jpg' %}
-          {% include photo-container.html category='korean' image='custom/gallery/korean/8.jpg' %}
-          {% include photo-container.html category='korean' image='custom/gallery/korean/9.jpg' %}
-          {% include photo-container.html category='korean' image='custom/gallery/korean/10.jpg' %}
-          {% include photo-container.html category='korean' image='custom/gallery/korean/11.jpg' %}
-          {% include photo-container.html category='korean' image='custom/gallery/korean/12.jpg' %}
-          {% include photo-container.html category='korean' image='custom/gallery/korean/13.jpg' %}
+          {% for i in (1..7) %}
+            {% capture image %}custom/gallery/chinese/{{i}}.jpg{% endcapture %}
+            {% include photo-container.html category='chinese' image=image %}
+          {% endfor %}
 
-          {% include photo-container.html category='chinese' image='custom/gallery/chinese/1.jpg' %}
-          {% include photo-container.html category='chinese' image='custom/gallery/chinese/2.jpg' %}
-          {% include photo-container.html category='chinese' image='custom/gallery/chinese/3.jpg' %}
-          {% include photo-container.html category='chinese' image='custom/gallery/chinese/4.jpg' %}
-          {% include photo-container.html category='chinese' image='custom/gallery/chinese/5.jpg' %}
-          {% include photo-container.html category='chinese' image='custom/gallery/chinese/6.jpg' %}
-          {% include photo-container.html category='chinese' image='custom/gallery/chinese/7.jpg' %}
+          {% for i in (1..7) %}
+            {% capture image %}custom/gallery/indian/{{i}}.jpg{% endcapture %}
+            {% include photo-container.html category='indian' image=image %}
+          {% endfor %}
+
+          {% for i in (1..12) %}
+            {% capture image %}custom/gallery/thai/{{i}}.jpg{% endcapture %}
+            {% include photo-container.html category='thai' image=image %}
+          {% endfor %}
+
+          {% for i in (1..5) %}
+            {% capture image %}custom/gallery/turkish/{{i}}.jpg{% endcapture %}
+            {% include photo-container.html category='turkish' image=image %}
+          {% endfor %}
         </div>
     </div><!--.cube masonry-->
 </div>
