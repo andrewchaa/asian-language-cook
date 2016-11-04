@@ -1,0 +1,69 @@
+<div class="divide80"></div>
+
+<div class="container">
+  <h2 class="center-heading">Gallery</h2>
+
+  <div class="cube-masonry">
+
+      <div id="filters-container" class="cbp-l-filters-alignCenter">
+          <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">
+              All <div class="cbp-filter-counter"></div>
+          </div>
+          <div data-filter=".chinese" class="cbp-filter-item">
+            <img style="padding-bottom=5px;" src="custom/gallery/national-flags/china.png"><br />
+              Chinese <div class="cbp-filter-counter"></div>
+          </div>
+          <div data-filter=".korean" class="cbp-filter-item">
+            <img style="padding-bottom=5px;" src="custom/gallery/national-flags/korea.png"><br />
+            Korean <div class="cbp-filter-counter"></div>
+          </div>
+          <div data-filter=".indian" class="cbp-filter-item">
+            <img style="padding-bottom=5px;" src="custom/gallery/national-flags/india.gif"><br />
+            Indian <div class="cbp-filter-counter"></div>
+          </div>
+          <div data-filter=".thai" class="cbp-filter-item">
+            <img style="padding-bottom=5px;" src="custom/gallery/national-flags/thailand.gif"><br />
+            Thai <div class="cbp-filter-counter"></div>
+          </div>
+          <div data-filter=".turkish" class="cbp-filter-item">
+            <img style="padding-bottom=5px;" src="custom/gallery/national-flags/turkey.png"><br />
+            Turkish <div class="cbp-filter-counter"></div>
+          </div>
+      </div>
+
+      <div id="masnory-container" class="cbp">
+        {% for i in (1..4) %}
+          {% capture image %}custom/gallery/korean/{{i}}.jpg{% endcapture %}
+          {% include photo-container.html category='korean' image=image %}
+        {% endfor %}
+
+        {% for i in (1..4) %}
+          {% capture image %}custom/gallery/chinese/{{i}}.jpg{% endcapture %}
+          {% include photo-container.html category='chinese' image=image %}
+        {% endfor %}
+
+        {% for i in (1..4) %}
+          {% capture image %}custom/gallery/indian/{{i}}.jpg{% endcapture %}
+          {% include photo-container.html category='indian' image=image %}
+        {% endfor %}
+
+        {% for i in (1..4) %}
+          {% capture image %}custom/gallery/thai/{{i}}.jpg{% endcapture %}
+          {% include photo-container.html category='thai' image=image %}
+        {% endfor %}
+
+        {% for i in (1..4) %}
+          {% capture image %}custom/gallery/turkish/{{i}}.jpg{% endcapture %}
+          {% include photo-container.html category='turkish' image=image %}
+        {% endfor %}
+      </div>
+  </div><!--.cube masonry-->
+</div>
+
+<div class="divide50"></div>
+
+<div class="text-center">
+  <a href="/gallery" class="btn btn-theme-dark btn-lg">View All Photos</a>
+</div>
+
+<div class="divide50"></div>
