@@ -1,0 +1,36 @@
+---
+layout: default
+title: Gallery - Events
+---
+
+{% include center-title.html %}
+
+<div class="container">
+    <div class="cube-masonry">
+
+        <div id="filters-container" class="cbp-l-filters-alignCenter">
+            <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">
+                All <div class="cbp-filter-counter"></div>
+            </div>
+            <div data-filter=".lets-cook-and-learn" class="cbp-filter-item">
+                Let's Cook and Learn <div class="cbp-filter-counter"></div>
+            </div>
+            <div data-filter=".childrens-kitchen" class="cbp-filter-item">
+              1st Children's Asian Digital Kitchen Day <div class="cbp-filter-counter"></div>
+            </div>
+        </div>
+
+        <div id="masnory-container" class="cbp">
+          {% for i in (1..8) %}
+            {% capture image %}custom/gallery/event-cook-and-learn/{{i}}.jpg{% endcapture %}
+            {% include photo-container.html category="lets-cook-and-learn" image=image %}
+          {% endfor %}
+
+          {% for i in (1..114) %}
+            {% capture image %}custom/gallery/event-childrens/{{i}}.jpg{% endcapture %}
+            {% include photo-container.html category="childrens-kitchen" image=image %}
+          {% endfor %}
+        </div>
+    </div><!--.cube masonry-->
+</div>
+<div class="divide50"></div>

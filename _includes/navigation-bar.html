@@ -20,7 +20,12 @@
                 </li>
 
                 <li class="dropdown {% if page.title == 'Gallery' %} active {% endif %}">
-                  <a href="/gallery" class="dropdown-toggle">Gallery</a>
+                  <!-- <a href="/gallery" class="dropdown-toggle">Gallery</a> -->
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Galleries <i class="fa fa-angle-down"></i></a>
+                  <ul class="dropdown-menu" role="menu">
+                      <li><a href="/gallery">Gallery - Food</a></li>
+                      <li><a href="/gallery-events">Gallery - Events</a></li>
+                  </ul>
                 </li>
 
                 <li class="dropdown {% if page.title == 'Events' %} active {% endif %}">
