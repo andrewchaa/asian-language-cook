@@ -18,6 +18,9 @@ title: Gallery - Events
             <div data-filter=".children-kitchen" class="cbp-filter-item">
               1st Children's Asian Digital Kitchen Day <div class="cbp-filter-counter"></div>
             </div>
+            <div data-filter=".children-kitchen-2" class="cbp-filter-item">
+              2nd Children's Asian Digital Kitchen Day <div class="cbp-filter-counter"></div>
+            </div>
         </div>
 
         <div id="masnory-container" class="cbp">
@@ -29,6 +32,11 @@ title: Gallery - Events
           {% for i in (1..114) %}
             {% capture image %}/custom/gallery/event-children-kitchen/{{i}}.jpg{% endcapture %}
             {% include photo-container.html category="children-kitchen" image=image %}
+          {% endfor %}
+
+          {% for i in (1..20) %}
+            {% capture image %}/custom/gallery/event-children-kitchen-2/{{i}}.jpg{% endcapture %}
+            {% include photo-container.html category="children-kitchen-2" image=image %}
           {% endfor %}
         </div>
     </div><!--.cube masonry-->
